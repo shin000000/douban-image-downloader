@@ -78,7 +78,7 @@ for i in range(1, pages):
 
 	for img in imgs:
 		try:
-			save_as = os.path.join(path, str(count) + '.jpg')
+			save_as = os.path.join(path, str(count).zfill(5) + '.jpg')
 			print(img.get_attribute('href'))		
 
 			image_url = img.get_attribute('href')
