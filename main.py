@@ -12,8 +12,6 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 
-
-
 # 在当前目录下创建用于存放图片的文件夹
 path = os.path.join("pictures")
 try:	
