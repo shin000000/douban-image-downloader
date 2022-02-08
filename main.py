@@ -57,7 +57,9 @@ status_url = hp_url[0] + "statuses?p="
 
 count = 0
 
-for i in range(1, 250):
+pages = input("你想从广播第一页下载到第几页？")
+
+for i in range(1, pages):
 	driver.get(status_url + str(i))
 
 	# 寻找网页中的图片
