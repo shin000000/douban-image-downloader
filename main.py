@@ -11,13 +11,20 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
+# # 添加log
+# if not os.path.exists("log"):
+#     os.makedirs("log")
+
+# log_file_path = "log/{}.log".format(time.strftime("%Y-%m-%d"))
+# fh = logging.FileHandler(filename=log_file_path, encoding="UTF-8")
+# logging.basicConfig(
+#     handlers=[fh], format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+# logger = logging.getLogger("whatever")
 
 # 在当前目录下创建用于存放图片的文件夹
 path = os.path.join("pictures")
-try:	
-	os.mkdir(path)
-except:
-	print('Unable to create folder')
+if not os.path.exists(path):
+    os.makedirs(path)
 
 # 配置chromedriver
 options = webdriver.ChromeOptions()
